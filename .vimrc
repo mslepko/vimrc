@@ -1,29 +1,34 @@
+execute pathogen#infect()
 syntax on
-colo candy
+filetype on
+filetype plugin on
 
-set showtabline=2
-set number
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+
+set cindent
 set smartindent
 set autoindent
-set smarttab
-set nobackup
-set noswapfile
-set cursorline
-set title
 
+set spell
 
-set ic
-set incsearch
-set hlsearch
-set smartcase
+set foldenable
+set foldmethod=syntax
 
-set nocompatible
-set expandtab
-set tabstop=4
-set softtabstop=4
-set ttyfast
-set showcmd
-set showmode
-set wildmenu
+set number
+set ruler
+set laststatus=2
+set showtabline=2
 
-let php_sql_query=1
+"Search"
+set hls is
+set wrapscan
+"set ic --ignore case"
+
+"Plugins"
+map <C-n> :NERDTreeToggle<CR>
+"let NERDTreeIgnore=['\.orig$','\.bak$']"
+
+map <F9> :!php -l %<CR>
